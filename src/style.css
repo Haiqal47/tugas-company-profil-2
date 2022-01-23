@@ -25,6 +25,11 @@
   transition: 0.5s ease;
 } 
 
+.team-card-img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 body::before {
   background-image: url(../img/bg2.png);
   color: #E48B1C;
