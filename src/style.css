@@ -66,7 +66,7 @@ img {
   object-fit: cover;
 }
 
-body::before {
+body.about::before {
   background-image: url(../img/bg2.png);
   color: #E48B1C;
   z-index: -1;
