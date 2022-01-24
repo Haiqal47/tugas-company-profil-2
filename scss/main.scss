@@ -1,0 +1,105 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+// VARIABLES
+$primary-color: #E48B1C;
+$secondary-color: #FFFFFF;
+$ter-color: #3844A2;
+$text-color: #2C2A55;
+
+// MIXIN
+@mixin CTA {
+    display: inline-block;
+    color: $secondary-color;
+    background-color: $primary-color;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    &:hover {
+        color: $secondary-color;
+        background-color: $text-color;
+        transition: 0.5s ease;
+    }
+}
+
+// Styles
+body {
+    font-family: 'Ubuntu', sans-serif;
+    &::before {
+        content: '';
+        background-image: url(../img/bg.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 50vmax;
+        position: absolute;    
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        @media screen and (max-width: 992px) {
+            opacity: 0.4;
+        }
+    }
+        }
+
+
+// Navbar
+.custom-nav {
+    .navbar-brand {
+        img {
+            width: 130px;
+            height: 30px;
+            margin-top: -20px;
+            margin-left: -10px;
+        }
+    }
+#navbarNav {
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $secondary-color;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin-left: 3em;
+                &:hover { 
+                    color: darken($primary-color, 30%);
+                }
+            }
+            .sign-up-button {
+                background-color: $secondary-color;
+                color: $text-color;
+                border: 0;
+                padding-left: 1em;
+                padding-right: 1em;
+                &:hover {
+                    color: $secondary-color;
+                    background-color: $text-color;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+    }
+}
+}
+
+// Custom Section
+.custom-section {
+    margin-top: 10em;
+    h1 {
+        font-weight: 700;
+        font-size: 3rem;
+        color: $text-color;
+    }
+    p {
+        color: $text-color;
+        font-size: 1.1rem;
+        margin-top: 1em;
+    }
+    a {
+        margin-top: 1em;
+        @include CTA;
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: 2em;
+    }
+}
